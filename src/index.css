@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+@import "primereact/resources/primereact.min.css";
+@import "react-international-phone/style.css";
+@import "react-tooltip/dist/react-tooltip.css";
+@import "./assets/_custom-theme.css";
+@import "aos/dist/aos.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+}
+
+.linear-gradient {
+	background: var(--primaryColor);
+	background: -webkit-linear-gradient(90deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
+	background: linear-gradient(90deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
+}
+
+.linear-gradient:hover {
+	background: var(--primaryColor);
+	background: -webkit-linear-gradient(
+		256deg,
+		var(--primaryColor) 0%,
+		var(--lightPrimaryColor) 100%
+	);
+	background: linear-gradient(256deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
+}
+
+.skill-box {
+	@apply rounded-full pt-[54px] pb-[48px] min-h-[250px] flex flex-col items-center justify-center hover:cursor-pointer;
+	background-color: var(--layout-bg-2);
+}
+
+.skill-box:hover span,
+.skill-box:hover svg {
+	color: #fff;
+}
+
+.app {
+	background-color: var(--layout-bg);
+	color: var(--text-color);
+}
+
+.profile-summary-section {
+	padding: 30px;
+	border-radius: 30px;
+	padding: 30px;
+	z-index: 10;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	background-color: var(--layout-bg-2);
+	color: var(--text-color);
+}
+
+.profile-image-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.right-toolbar {
+	border-radius: 30px;
+	position: fixed;
+	right: 60px;
+	width: 55px;
+	text-align: center;
+	gap: 20px;
+	padding: 24px 0;
+	z-index: 20;
+	top: 50%;
+	transform: translateY(-50%);
+	min-height: 200px;
+	background: var(--layout-bg-2);
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.right-toolbar ul li:hover a svg {
+	color: blue;
+}
+
+.social-btn-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	line-height: 46px;
+	text-align: center;
+	border-radius: 50%;
+	color: #999999;
+	font-size: 20px;
+	transition: 0.3s;
+	background: var(--gradient-bg);
+	box-shadow: var(--gradient-box-shadow);
+}
+
+.social-btn-icon svg {
+	color: var(--text-color);
+}
+
+.social-btn-icon:hover {
+	background: linear-gradient(145deg, var(--primaryColor), var(--lightPrimaryColor));
+}
+
+.social-btn-icon:hover svg {
+	color: #fff;
+}
+
+.mobile-menu-btn {
+	background: var(--gradient-bg);
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.mobile-menu-btn:hover svg {
+	color: var(--primaryColor);
+}
+
+.my-name {
+	color: var(--primaryColor);
+}
+
+.title-label {
+	background: var(--layout-bg-2);
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.scroll-to-project-btn {
+	background: var(--layout-bg-2);
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.p-timeline-event-opposite {
+	display: none;
+}
+
+.p-timeline .p-timeline-event-marker {
+	border: 2px solid var(--primaryColor);
+	border-radius: 50%;
+	width: 1rem;
+	height: 1rem;
+	background-color: var(--primaryColor);
+}
+
+.p-timeline-event:hover .p-timeline-event-marker {
+	background-color: var(--lightPrimaryColor);
+	border: 2px solid var(--lightPrimaryColor);
+}
+
+.p-timeline-event:hover .card .time-period {
+	color: var(--lightPrimaryColor);
+}
+
+.specialization-card,
+.skill-box {
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.btn-tech {
+	@apply py-[7px] px-[20px] rounded-[19px] text-sm block;
+	background-color: var(--layout-bg-2);
+	color: var(--text-color);
+}
+
+.project-card {
+	@apply rounded-[30px] overflow-hidden bg-cover bg-no-repeat bg-center min-h-[410px] w-full relative;
+}
+
+.p-inputtext {
+	@apply w-full block border-t-0 border-l-0 border-r-0 rounded-none bg-transparent pl-0 text-[20px];
+	color: var(--text-color);
+	border-color: var(--input-border);
+}
+
+.p-inputtext:enabled:focus {
+	box-shadow: none;
+}
+
+.form-group {
+	@apply mb-5;
+}
+
+label {
+	@apply text-[14px];
+}
+
+.react-international-phone-input {
+	width: 100% !important;
+	height: 55px !important;
+	background: transparent !important;
+	border-top: none !important;
+	border-right: none !important;
+	border-radius: 0 !important;
+	border-left: none !important;
+	border-color: var(--input-border) !important;
+	color: var(--text-color) !important;
+	font-size: 20px !important;
+}
+
+.react-international-phone-input:focus {
+	border-color: var(--lightPrimaryColor) !important;
+}
+
+.react-international-phone-country-selector-button {
+	height: 100%;
+	border-left: none;
+	border-top: none;
+	border-right: none;
+	border-radius: 0 !important;
+	border-color: var(--input-border) !important;
+}
+
+.active-scroll-spy {
+	@apply rounded-sm;
+	background: linear-gradient(256deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
+}
+
+.active-scroll-spy a svg {
+	@apply text-white;
+}
+
+.react-tooltip {
+	background-color: #fff;
+	opacity: 1;
+	color: #1a1a1a;
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+}
+
+.settingSidebar {
+	width: 65rem !important;
+}
+
+.app-settings-btn {
+	background: var(--layout-bg-2);
+}
+
+.specialization-card {
+	background-color: var(--layout-bg-2);
+}
+
+.p-timeline .p-timeline-event-connector {
+	background-color: var(--timeline-connector-color);
+}
+
+.p-sidebar {
+	background: var(--layout-bg-2) !important;
+	color: var(--text-color) !important;
+}
+
+.p-sidebar svg {
+	color: var(--text-color);
+}
+
+.p-sidebar ul li:hover svg,
+.p-sidebar svg:hover {
+	color: var(--primaryColor);
+}
+
+.analytic-label h1 {
+	color: var(--primaryColor);
+}
+
+.color-pallete:hover,
+.color-pallete.active {
+	outline: 1px solid var(--text-color);
+	outline-offset: 5px;
+}
+
+.color-pallete:hover::after,
+.color-pallete.active::after {
+	display: block;
+}
