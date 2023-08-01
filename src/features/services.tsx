@@ -27,15 +27,21 @@ const Services = () => {
 						<div className="flex items-start justify-between mb-1">
 							<h3 className="text-xl font-light lg:text-2xl">Angular Applications</h3>
 
-							<FaAngular className="text-4xl text-red-700"></FaAngular>
+							<FaAngular className="text-4xl text-red-700 animate-bounce"></FaAngular>
 						</div>
 						<p className="text-sm text-gray-500">
-							I design and develop applications using Angular framework
+							Angular is my forte! I have extensive experience in developing dynamic and robust web
+							applications using the Angular framework. With a keen eye for detail, I excel in
+							crafting seamless user interfaces and ensuring smooth data flow through reactive
+							components. From handling complex state management with RxJS to building custom
+							directives and services, I've got it all covered. Whether it's creating a single-page
+							application or working on a large-scale enterprise project,{" "}
+							<span className="italic text-red-700 font-semibold">
+								Angular is where I truly shine!
+							</span>
 						</p>
 
-						<a href="" className="block mt-5 text-xs font-bold text-red-700">
-							80 PROJECTS
-						</a>
+						<span className="block mt-5 text-xs font-bold text-red-700">37 PROJECTS</span>
 					</div>
 				</div>
 
@@ -44,16 +50,20 @@ const Services = () => {
 						<div className="flex items-start justify-between mb-1">
 							<h3 className="text-xl font-light lg:text-2xl">React Applications</h3>
 
-							<FaReact className="text-4xl text-blue-700"></FaReact>
+							<FaReact className="text-4xl text-blue-700 animate-spin-slow"></FaReact>
 						</div>
 						<p className="text-sm text-gray-500">
-							I design and create javascript-based applications for web or mobile evironments using
-							react library
+							<span className="font-semibold text-blue-700 italic">React, oh how I love thee!</span>{" "}
+							As a skilled React developer, I thrive on building interactive and efficient user
+							interfaces that leave users impressed. From creating reusable components to harnessing
+							the power of state management with Redux, I revel in the art of React development.
+							Crafting high-performance React applications that seamlessly handle data updates and
+							interactions is my passion. Whether it's working on front-end views or integrating
+							with back-end APIs, I take pride in delivering top-notch React applications that
+							elevate user experiences to the next level!
 						</p>
 
-						<a href="" className="block mt-5 text-xs font-bold text-blue-700">
-							20 PROJECTS
-						</a>
+						<span className="block mt-5 text-xs font-bold text-blue-700">20 PROJECTS</span>
 					</div>
 				</div>
 			</div>

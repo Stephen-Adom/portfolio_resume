@@ -297,3 +297,8 @@ label {
 .color-pallete.active::after {
 	display: block;
 }
+
+.p-inplace .p-inplace-display:not(.p-disabled):hover {
+	background: transparent;
+	color: var(--text-color);
+}

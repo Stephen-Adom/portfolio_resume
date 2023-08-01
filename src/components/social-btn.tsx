@@ -1,11 +1,14 @@
 export type propType = {
-	children: JSX.Element;
+	link: {
+		url: string;
+		icon: JSX.Element;
+	};
 };
 
-const SocialBtn = ({ children }: propType) => {
+const SocialBtn = ({ link }: propType) => {
 	return (
-		<a href="#" className="btn social-btn-icon">
-			{children}
+		<a href={link.url} target="_blank" className="btn social-btn-icon">
+			{link.icon}
 		</a>
 	);
 };
