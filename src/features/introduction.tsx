@@ -24,7 +24,7 @@ const Introduction = () => {
 				Developer
 			</h1>
 
-			<p className="mt-10 text-gray-500 w-full lg:w-[60%]">
+			<p className="mt-10 w-full lg:w-[60%]">
 				I design and code beautifully simple things and I love what I do. Just simple like that!
 			</p>
 

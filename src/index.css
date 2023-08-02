@@ -25,6 +25,10 @@ body {
 	min-height: 100vh;
 }
 
+#introduction p {
+	color: var(--text-grey);
+}
+
 .linear-gradient {
 	background: var(--primaryColor);
 	background: -webkit-linear-gradient(90deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
