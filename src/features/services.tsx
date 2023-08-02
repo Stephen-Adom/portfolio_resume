@@ -1,6 +1,7 @@
 import { TitleLabel } from "../components";
 import { FaAngular, FaReact } from "react-icons/fa";
 import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
+import { SiRubyonrails } from "react-icons/si";
 
 const Services = () => {
 	return (
@@ -45,7 +46,7 @@ const Services = () => {
 					</div>
 				</div>
 
-				<div className="rounded-3xl card specialization-card hover:cursor-pointer">
+				<div className="rounded-3xl card specialization-card hover:cursor-pointer mb-5">
 					<div className="p-8 md:p-10 lg:p-10 card-body">
 						<div className="flex items-start justify-between mb-1">
 							<h3 className="text-xl font-light lg:text-2xl">React Applications</h3>
@@ -64,6 +65,30 @@ const Services = () => {
 						</p>
 
 						<span className="block mt-5 text-xs font-bold text-blue-700">20 PROJECTS</span>
+					</div>
+				</div>
+
+				<div className="rounded-3xl card specialization-card hover:cursor-pointer">
+					<div className="p-8 md:p-10 lg:p-10 card-body">
+						<div className="flex items-start justify-between mb-1">
+							<h3 className="text-xl font-light lg:text-2xl">Ruby on Rails Applications</h3>
+
+							<SiRubyonrails className="text-6xl text-red-800 animate-pulse"></SiRubyonrails>
+						</div>
+						<p className="text-sm text-gray-500">
+							<span className="font-semibold text-red-800 italic">
+								Ruby on Rails is another dimension of my expertise.
+							</span>{" "}
+							I have a deep understanding of developing web applications using the Ruby on Rails
+							framework. My proficiency extends from crafting elegant backend architectures to
+							seamlessly integrating frontend components. With Ruby on Rails, I'm able to create
+							robust, scalable, and efficient applications that stand out for their functionality
+							and performance. Whether it's optimizing database interactions or building RESTful
+							APIs, Ruby on Rails is an integral part of my skill set that adds depth to my
+							specialization.
+						</p>
+
+						<span className="block mt-5 text-xs font-bold text-red-800">7 PROJECTS</span>
 					</div>
 				</div>
 			</div>
