@@ -68,8 +68,8 @@ const Resume = () => {
 
 	const renderExperience = (experience: experienceType) => {
 		return (
-			<div className="pb-10 pl-4 card hover:cursor-pointer">
-				<span className="block text-sm text-gray-500 time-period">
+			<div className="pb-10 pl-4 card hover:cursor-pointer resume-info">
+				<span className="block text-sm time-period">
 					{experience.startdate} - {experience.enddate}
 				</span>
 
@@ -77,11 +77,11 @@ const Resume = () => {
 				<a
 					href={experience.companyUrl}
 					target="_blank"
-					className="flex items-center gap-2 mt-3 text-sm text-gray-500"
+					className="flex items-center gap-2 mt-3 text-sm"
 				>
 					<BsFillBuildingsFill /> {experience.company}
 				</a>
-				<span className="flex items-center gap-1 mt-2 text-gray-500">
+				<span className="flex items-center gap-1 mt-2">
 					<FaMapMarkerAlt /> {experience.location}
 				</span>
 			</div>
@@ -90,7 +90,7 @@ const Resume = () => {
 
 	const renderEducation = (education: educationType) => {
 		return (
-			<div className="pb-10 pl-4 card hover:cursor-pointer">
+			<div className="pb-10 pl-4 card hover:cursor-pointer resume-info">
 				<span className="block text-sm text-gray-500 time-period">
 					{education.startdate} - {education.enddate}
 				</span>

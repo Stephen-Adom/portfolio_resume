@@ -25,7 +25,9 @@ body {
 	min-height: 100vh;
 }
 
-#introduction p {
+#introduction p,
+.resume-info span,
+.resume-info a {
 	color: var(--text-grey);
 }
 
