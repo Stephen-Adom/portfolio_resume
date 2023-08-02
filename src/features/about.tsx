@@ -1,5 +1,6 @@
 import { AiOutlineUser } from "react-icons/ai";
 import { Inplace, InplaceDisplay, InplaceContent } from "primereact/inplace";
+import { BiChevronsDown } from "react-icons/bi";
 import { TitleLabel } from "../components";
 
 const About = () => {
@@ -29,11 +30,11 @@ const About = () => {
 			<Inplace>
 				<InplaceDisplay>
 					<p
-						className="w-full lg:w-[70%] cursor-pointer my-name italic font-bold"
+						className="w-full lg:w-[70%] cursor-pointer my-name italic font-bold flex items-center"
 						data-aos="fade-up"
 						data-aos-duration="3000"
 					>
-						I want to know more...
+						<BiChevronsDown className="text-lg animate-bounce" />I want to know more...
 					</p>
 				</InplaceDisplay>
 				<InplaceContent>
