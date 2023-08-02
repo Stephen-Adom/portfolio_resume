@@ -13,6 +13,7 @@
 	--text-color-light: #181c32;
 	--timeline-connector-color-light: #dee2e6;
 	--input-border-light: #ced4da;
+	--text-grey-light: #9ca3af;
 
 	/* DARK THEME COLORS*/
 	--box-shadow-dark: 3px 3px 10px 3px #181c21;
@@ -23,6 +24,7 @@
 	--text-color-dark: #fefeff;
 	--timeline-connector-color-dark: #0a0a12;
 	--input-border-dark: #41454a;
+	--text-grey-dark: #aeb3bb;
 }
 
 [color-scheme="light"] {
@@ -34,6 +36,7 @@
 	--box-shadow: var(--box-shadow-light);
 	--timeline-connector-color: var(--timeline-connector-color-light);
 	--input-border: var(--input-border-light);
+	--text-grey: var(--text-grey-light);
 }
 
 [color-scheme="dark"] {
@@ -45,4 +48,5 @@
 	--box-shadow: var(--box-shadow-dark);
 	--timeline-connector-color: var(--timeline-connector-color-dark);
 	--input-border: var(--input-border-dark);
+	--text-grey: var(--text-grey-dark);
 }

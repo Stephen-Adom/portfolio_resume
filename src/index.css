@@ -25,6 +25,12 @@ body {
 	min-height: 100vh;
 }
 
+#introduction p,
+.resume-info span,
+.resume-info a {
+	color: var(--text-grey);
+}
+
 .linear-gradient {
 	background: var(--primaryColor);
 	background: -webkit-linear-gradient(90deg, var(--primaryColor) 0%, var(--lightPrimaryColor) 100%);
@@ -296,4 +302,9 @@ label {
 .color-pallete:hover::after,
 .color-pallete.active::after {
 	display: block;
+}
+
+.p-inplace .p-inplace-display:not(.p-disabled):hover {
+	background: transparent;
+	color: var(--text-color);
 }

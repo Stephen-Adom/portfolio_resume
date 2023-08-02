@@ -2,7 +2,11 @@
 export default {
 	content: ["./index.html", "./src/**/*.{ts,tsx}"],
 	theme: {
-		extend: {},
+		extend: {
+			animation: {
+				"spin-slow": "spin 3s linear infinite",
+			},
+		},
 	},
 	plugins: [],
 };

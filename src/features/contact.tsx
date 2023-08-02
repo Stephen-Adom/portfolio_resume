@@ -15,7 +15,7 @@ const Contact = () => {
 				Let's Work <span className="text-lightBlue">Together</span>
 			</h1>
 			<div className="w-full mt-6">
-				<p className="text-2xl">example@gmail.com</p>
+				<p className="text-2xl">stephen.alaska94@gmail.com</p>
 
 				<form
 					action=""
