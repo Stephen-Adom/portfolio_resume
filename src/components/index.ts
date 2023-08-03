@@ -7,3 +7,4 @@ export { default as SkillsCard } from "./skill-card";
 export { default as Tooltips } from "./tooltips";
 export { default as SidebarComponent } from "./sidebar";
 export { default as AppSettingsBtn } from "./app-settings-icon";
+export { default as SpecializationCard } from "./specialization-card";

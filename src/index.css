@@ -27,7 +27,8 @@ body {
 
 #introduction p,
 .resume-info span,
-.resume-info a {
+.resume-info a,
+.specialization-card p {
 	color: var(--text-grey);
 }
 
