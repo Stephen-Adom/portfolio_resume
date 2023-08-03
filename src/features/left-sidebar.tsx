@@ -43,7 +43,7 @@ const LeftSidebar = () => {
 			</div>
 
 			<div
-				className="profile-image-container w-full min-h-[230px] rounded-[30px] mt-5 mb-8"
+				className="profile-image-container w-full min-h-[230px] rounded-[30px] mt-5 mb-8 -scale-x-100 "
 				style={style}
 			></div>
 
