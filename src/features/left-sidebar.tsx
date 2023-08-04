@@ -3,7 +3,6 @@ import { AiFillGithub } from "react-icons/ai";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { SocialBtn } from "../components";
 import profile from "../assets/alaska.png";
-import logo from "../assets/sa-logo.png";
 
 const LeftSidebar = () => {
 	const formatYear = () => {
@@ -31,12 +30,6 @@ const LeftSidebar = () => {
 		<div className="min-h-auto sm:min-h-auto md:min-h-auto lg:min-h-[90vh] profile-summary-section w-[95%] sm:w-[95%] md:w-[95%] lg:w-[24%] mx-auto left-0 sm:left-0 md:left lg:left-[20px] relative sm:relative md:relative lg:fixed top-0 sm:top-0 md:top-0 lg:top-[50%] translate-y-0 sm:translate-y-0 md:translate-y-0 lg:-translate-y-[50%]">
 			<div className="flex items-center justify-between top-section">
 				<h3 className="relative text-2xl font-extrabold name-logo">
-					<img
-						src={logo}
-						width={"30px"}
-						className="absolute -top-3 -right-7 contrast-[.25]"
-						alt="stephen-addae"
-					/>
 					Stephen
 				</h3>
 				<p className="text-sm job-title">Full-stack Developer</p>
