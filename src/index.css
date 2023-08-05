@@ -319,3 +319,16 @@ label {
 .project-card:hover {
 	background-size: 108%;
 }
+
+.project-image-container {
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	background-color: var(--layout-bg-2);
+	border-radius: 10px;
+	padding: 30px;
+}
+
+.swiper.swiper-horizontal {
+	height: 100%;
+}

@@ -5,6 +5,7 @@ export type ProjectType = {
 	gitHub_link: string;
 	live_demo: string;
 	tech_stacks: string[];
+	screenshots: string[];
 };
 
 export const PersonalProjects: ProjectType[] = [
@@ -17,6 +18,11 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/Stephen-Adom/concert-react-front-end",
 		live_demo: "https://concert-react-front-end.vercel.app/",
 		tech_stacks: ["ReactJS", "Ruby on Rails", "Git", "Tailwind CSS"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/zfvolfhyej9odbupxqgp",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/kmffp9lr6nfqkigqxb4t",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/yg3asbnwwncirrpisly1",
+		],
 	},
 	{
 		name: "Country Explorer",
@@ -27,6 +33,11 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/Stephen-Adom/rest-countries",
 		live_demo: "https://stephen-adom.github.io/rest-countries",
 		tech_stacks: ["HTML 5", "Tailwind CSS", "Typescript", "RxJS", "Webpack 5"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/hxgroedcqvb9htabd970",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/zwjhu6axtlbgpaqustg8",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/ggnvegjhn3esi1ptig92",
+		],
 	},
 	{
 		name: "LeaderBoard",
@@ -37,6 +48,10 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/Stephen-Adom/leaderboard",
 		live_demo: "https://leaderboard-smoky.vercel.app/",
 		tech_stacks: ["HTML 5", "CSS 3", "Bootstrap", "Javascript", "Webpack 5"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/upvyw1ocbpkhdbxymqeq",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/pxx6af7esepdezkccnns",
+		],
 	},
 	{
 		name: "Rock Paper Scissor, Lizard and Spock",
@@ -47,6 +62,11 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/Stephen-Adom/rock-paper-scissor-lizard-spock-game",
 		live_demo: "https://rock-paper-scissor-lizard-spock-game-seven.vercel.app/",
 		tech_stacks: ["ReactJS", "Tailwind CSS", "PrimeReact", "Typescript", "Flexbox", "CSS Grid"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/zdu52fbkrzeouumfwpbx",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/xlpgozgdha05skpjsljs",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/bczwiuk631omoenm9fni",
+		],
 	},
 	{
 		name: "Covidio",
@@ -57,6 +77,10 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/Stephen-Adom/covidio",
 		live_demo: "https://covidio.vercel.app/",
 		tech_stacks: ["ReactJS", "Tailwind CSS", "PrimeReact"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/jybqvb9ljsrunthxxahz",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/vl4ckpyksn5cr39pcjf3",
+		],
 	},
 
 	{
@@ -68,5 +92,9 @@ export const PersonalProjects: ProjectType[] = [
 		gitHub_link: "https://github.com/adamilare/movieverse",
 		live_demo: "https://adamilare.github.io/movieverse/dist/",
 		tech_stacks: ["HTML 5", "Bootstrap 5", "CSS 3", "Javascript", "Webpack 5"],
+		screenshots: [
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/indtlem0poorqoxt3otp",
+			"https://res.cloudinary.com/dt8tdf7uu/image/upload/f_auto,q_auto/v1/portfolio/gmouqz7iobqi35newzqs",
+		],
 	},
 ];
