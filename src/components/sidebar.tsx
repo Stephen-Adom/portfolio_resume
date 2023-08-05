@@ -1,7 +1,7 @@
 import { Sidebar } from "primereact/sidebar";
 import { useContext } from "react";
 import { SidebarContext } from "../App";
-import { AiFillGithub, AiOutlineHome, AiOutlineTwitter, AiOutlineUser } from "react-icons/ai";
+import { AiFillGithub, AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { RiLayoutMasonryLine, RiSuitcase2Line } from "react-icons/ri";
 import { HiOutlineEnvelope, HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import { BiShapeTriangle } from "react-icons/bi";
@@ -73,10 +73,10 @@ const SidebarComponent = () => {
 				<h2 className="text-xl">Social</h2>
 
 				<div className="flex items-center gap-4 mt-5">
-					<a href="https://www.linkedin.com/in/stephen-addae/" target="_blank">
+					<a title="linkedIn" href="https://www.linkedin.com/in/stephen-addae/" target="_blank">
 						<FaLinkedinIn className="text-black text-md"></FaLinkedinIn>
 					</a>
-					<a href="https://github.com/Stephen-Adom" target="_blank">
+					<a title="github" href="https://github.com/Stephen-Adom" target="_blank">
 						<AiFillGithub className="text-black text-md"></AiFillGithub>
 					</a>
 				</div>
