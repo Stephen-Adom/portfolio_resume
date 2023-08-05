@@ -196,7 +196,7 @@ body {
 }
 
 .project-card {
-	@apply rounded-[30px] overflow-hidden bg-cover bg-no-repeat bg-center min-h-[410px] w-full relative;
+	@apply rounded-[30px] overflow-hidden bg-no-repeat bg-center min-h-[410px] w-full relative;
 }
 
 .p-inputtext {
@@ -309,4 +309,13 @@ label {
 .p-inplace .p-inplace-display:not(.p-disabled):hover {
 	background: transparent;
 	color: var(--text-color);
+}
+
+.project-card {
+	transition: 0.5s all ease;
+	background-size: 100%;
+}
+
+.project-card:hover {
+	background-size: 108%;
 }
