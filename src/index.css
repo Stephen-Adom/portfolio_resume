@@ -189,8 +189,9 @@ body {
 }
 
 .btn-tech {
-	@apply py-[7px] px-[20px] rounded-[19px] text-sm block;
+	@apply py-[7px] px-[20px] rounded-[19px] text-sm block shadow-lg;
 	background-color: var(--layout-bg-2);
+	border: 1px solid var(--layout-bg);
 	color: var(--text-color);
 }
 
