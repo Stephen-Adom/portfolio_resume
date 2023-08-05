@@ -8,3 +8,4 @@ export { default as Tooltips } from "./tooltips";
 export { default as SidebarComponent } from "./sidebar";
 export { default as AppSettingsBtn } from "./app-settings-icon";
 export { default as SpecializationCard } from "./specialization-card";
+export { default as ProjectCard } from "./project-card";

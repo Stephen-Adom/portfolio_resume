@@ -189,13 +189,14 @@ body {
 }
 
 .btn-tech {
-	@apply py-[7px] px-[20px] rounded-[19px] text-sm block;
-	background-color: var(--layout-bg-2);
+	@apply py-[7px] px-[20px] rounded-[19px] text-sm block shadow-lg;
+	background-color: var(--layout-bg);
+	border: 2px solid var(--layout-bg);
 	color: var(--text-color);
 }
 
 .project-card {
-	@apply rounded-[30px] overflow-hidden bg-cover bg-no-repeat bg-center min-h-[410px] w-full relative;
+	@apply rounded-[30px] overflow-hidden bg-no-repeat bg-center min-h-[410px] w-full relative;
 }
 
 .p-inputtext {
@@ -308,4 +309,31 @@ label {
 .p-inplace .p-inplace-display:not(.p-disabled):hover {
 	background: transparent;
 	color: var(--text-color);
+}
+
+.project-card {
+	transition: 0.5s all ease;
+	background-size: 100%;
+	background-color: var(--layout-bg-2);
+}
+
+.project-card:hover {
+	background-size: 108%;
+}
+
+.project-card::after {
+	background-color: var(--project-card-overlay);
+}
+
+.project-image-container {
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	background-color: var(--layout-bg-2);
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.swiper.swiper-horizontal {
+	height: 100%;
 }
