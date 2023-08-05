@@ -13,12 +13,14 @@ const ProjectCard = ({ project, index }: propType) => {
 	return (
 		<>
 			<div
+				data-aos="fade-up"
+				data-aos-duration="2500"
 				className={`${(index === 0 || index === 5) && "col-span-1 lg:col-span-2"}`}
 				onClick={() => setVisible(true)}
 			>
 				<div
 					style={{ backgroundImage: `url(${project.image})` }}
-					className={`project-card cursor-pointer relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gray-900/10`}
+					className={`project-card cursor-pointer relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full`}
 				>
 					<div className="absolute flex items-center flex-wrap gap-2 tech bottom-4 left-4 z-10">
 						{project.tech_stacks.length &&

@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import { BsArrowRightCircle, BsGlobeAmericas } from "react-icons/bs";
 import { ProjectType } from "../model/project";
+import { RiCloseFill } from "react-icons/ri";
 
 type propType = {
 	visible: boolean;
@@ -21,7 +22,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 			style={{ width: "100vw" }}
 			onHide={() => setVisible(false)}
 		>
-			<div className="project-details-container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-[60%_40%] gap-3 mt-10">
+			<div className="project-details-container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-[60%_40%] gap-3 mt-10 relative top-[50%] -translate-y-[50%]">
 				<section className="project-image-container">
 					<Swiper
 						modules={[Navigation, Pagination]}
@@ -48,7 +49,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 					<h2 className="font-extrabold text-3xl">{project.name}</h2>
 					<p className="mt-3 text-justify">{project.description}</p>
 
-					<div className="mt-4 flex items-center gap-2 tech bottom-4 left-4">
+					<div className="mt-4 flex items-center gap-2 flex-wrap tech bottom-4 left-4">
 						{project.tech_stacks.map((stack) => {
 							return (
 								<button type="button" className="btn btn-tech" key={stack}>
@@ -59,24 +60,35 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 					</div>
 
 					<div className="flex items-center gap-4 mt-10">
-						<button
-							type="button"
+						<a
+							href={project.gitHub_link}
+							target="_blank"
 							className="px-5 py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center gap-x-2"
 						>
 							VIEW PROJECT
 							<BsArrowRightCircle className="text-lg" />
-						</button>
+						</a>
 
-						<button
-							type="button"
+						<a
+							href={project.live_demo}
+							target="_blank"
 							className="px-5 py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center gap-x-2"
 						>
 							LIVE DEMO
 							<BsGlobeAmericas className="text-lg" />
-						</button>
+						</a>
 					</div>
 				</section>
 			</div>
+
+			<button
+				title="close"
+				onClick={() => setVisible(false)}
+				type="button"
+				className="fixed z-30 btn w-[60px] h-[60px] mobile-menu-btn rounded-full flex items-center justify-center top-5 right-3 sm:right-3 lg:right-16"
+			>
+				<RiCloseFill className="text-2xl" />
+			</button>
 		</Dialog>
 	);
 };
