@@ -47,7 +47,7 @@ const Contact = () => {
 						<InputText placeholder="Your Email Address" id="subject" />
 					</div>
 
-					<div className="col-span-1 lg:col-span-2 form-group">
+					<div className="col-span-1 md:col-span-2 form-group">
 						<label htmlFor="message">
 							MESSAGE <span className="text-red-600">*</span>
 						</label>
