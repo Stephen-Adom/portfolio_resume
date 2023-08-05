@@ -4,6 +4,7 @@ import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import { PhoneInput } from "react-international-phone";
 import { useForm } from "react-hook-form";
+import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
 type ContactFormType = {
 	fullname: string;
@@ -32,6 +33,34 @@ const Contact = () => {
 
 	const onSubmit = (data: ContactFormType) => {
 		console.log(data);
+		const form = document.createElement("form");
+		form.style.display = "none";
+
+		const emailBody: any = {
+			from_name: data.fullname + ` <${data.email}>`,
+			to_name: "Stephen Adom Addae",
+			message: data.message,
+			reply_to: data.email,
+		};
+
+		for (const key in emailBody) {
+			const input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = emailBody[key];
+			form.appendChild(input);
+		}
+
+		document.body.appendChild(form);
+
+		emailjs.sendForm("service_iljohou", "template_gicdnqz", form, "7JGwtKQcRgR4XdTIc").then(
+			(result: EmailJSResponseStatus) => {
+				console.log(result.text);
+			},
+			(error) => {
+				console.log(error.text);
+			}
+		);
 	};
 
 	const errorBorder = (field: keyof ContactFormType) => {
