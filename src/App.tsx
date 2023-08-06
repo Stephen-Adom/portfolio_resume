@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, createContext, useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 import { MobileMenuBtn, SidebarComponent } from "./components";
 import Home from "./pages/home.page";
 
@@ -55,6 +56,7 @@ function App() {
 				<MobileMenuBtn />
 				<Home />
 			</SidebarContext.Provider>
+			<Toaster />
 		</section>
 	);
 }
