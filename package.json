@@ -17,7 +17,7 @@
 		"react-dom": "^18.2.0",
 		"react-hook-form": "^7.45.2",
 		"react-icons": "^4.8.0",
-		"react-international-phone": "^2.2.2",
+		"react-phone-number-input": "^3.3.1",
 		"react-tooltip": "^5.13.1",
 		"react-ui-scrollspy": "^2.3.0",
 		"swiper": "^10.1.0"

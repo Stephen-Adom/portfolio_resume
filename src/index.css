@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "primereact/resources/themes/lara-light-indigo/theme.css";
 @import "primereact/resources/primereact.min.css";
-@import "react-international-phone/style.css";
+@import "react-phone-number-input/style.css";
 @import "react-tooltip/dist/react-tooltip.css";
 @import "./assets/_custom-theme.css";
 @import "aos/dist/aos.css";
@@ -217,7 +217,7 @@ label {
 	@apply text-[14px];
 }
 
-.react-international-phone-input {
+.PhoneInputInput {
 	width: 100% !important;
 	height: 55px !important;
 	background: transparent !important;
@@ -226,21 +226,19 @@ label {
 	border-radius: 0 !important;
 	border-left: none !important;
 	border-color: var(--input-border) !important;
+	border-bottom: 1px solid;
 	color: var(--text-color) !important;
 	font-size: 20px !important;
 }
 
-.react-international-phone-input:focus {
+.PhoneInputInput:focus {
 	border-color: var(--lightPrimaryColor) !important;
+	outline: none !important;
 }
 
-.react-international-phone-country-selector-button {
-	height: 100%;
-	border-left: none;
-	border-top: none;
-	border-right: none;
-	border-radius: 0 !important;
-	border-color: var(--input-border) !important;
+.PhoneInputCountrySelect {
+	background-color: var(--layout-bg);
+	color: var(--text-color);
 }
 
 .active-scroll-spy {

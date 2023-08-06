@@ -1,11 +1,12 @@
+import { useState } from "react";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TitleLabel } from "../components";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
-import { PhoneInput } from "react-international-phone";
+// import { PhoneInput, usePhoneValidation } from "react-international-phone";
+import PhoneInput from "react-phone-number-input";
 import { useForm } from "react-hook-form";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { useState } from "react";
 
 type ContactFormType = {
 	fullname: string;
@@ -15,12 +16,14 @@ type ContactFormType = {
 	message: string;
 };
 
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID as string;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID as string;
-const USER_KEY = process.env.REACT_APP_USER_KEY as string;
+const SERVICE_ID = import.meta.env.VITE_APP_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_APP_TEMPLATE_ID;
+const USER_KEY = import.meta.env.VITE_APP_USER_KEY;
 
 const Contact = () => {
-	const [loading, setLoading] = useState(true);
+	const [loading, setLoading] = useState(false);
+	const [phonenumber, setPhonenumber] = useState("");
+	// const phoneValidation = usePhoneValidation(phonenumber);
 
 	const form = useForm<ContactFormType>({
 		defaultValues: {
@@ -39,37 +42,44 @@ const Contact = () => {
 	} = form;
 
 	const onSubmit = (data: ContactFormType) => {
-		setLoading(true);
-		const form = document.createElement("form");
-		form.style.display = "none";
+		console.log(phonenumber);
+		// console.log(phoneValidation);
+		// setLoading(true);
+		// const form = document.createElement("form");
+		// form.style.display = "none";
 
-		const emailBody: any = {
-			from_name: data.fullname + ` <${data.email}>`,
-			to_name: "Stephen Adom Addae",
-			message: data.message,
-			reply_to: data.email,
-		};
+		// const emailBody: any = {
+		// 	from_name: data.fullname + ` <${data.email}>`,
+		// 	to_name: "Stephen Adom Addae",
+		// 	message: data.message,
+		// 	reply_to: data.email,
+		// };
 
-		for (const key in emailBody) {
-			const input = document.createElement("input");
-			input.type = "hidden";
-			input.name = key;
-			input.value = emailBody[key];
-			form.appendChild(input);
-		}
+		// for (const key in emailBody) {
+		// 	const input = document.createElement("input");
+		// 	input.type = "hidden";
+		// 	input.name = key;
+		// 	input.value = emailBody[key];
+		// 	form.appendChild(input);
+		// }
 
-		document.body.appendChild(form);
+		// document.body.appendChild(form);
 
-		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
-			(result: EmailJSResponseStatus) => {
-				console.log(result.text);
-				setLoading(false);
-			},
-			(error) => {
-				console.log(error.text);
-				setLoading(false);
-			}
-		);
+		// emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
+		// 	(result: EmailJSResponseStatus) => {
+		// 		console.log(result.text);
+		// 		setLoading(false);
+		// 	},
+		// 	(error) => {
+		// 		console.log(error.text);
+		// 		setLoading(false);
+		// 	}
+		// );
+	};
+
+	const updatePhonenumber = (value: string) => {
+		console.log(value);
+		// console.log(isPossiblePhoneNumber(value));
 	};
 
 	const errorBorder = (field: keyof ContactFormType) => {
@@ -136,7 +146,12 @@ const Contact = () => {
 
 					<div className="form-group">
 						<label htmlFor="phone">PHONE (OPTIONAL)</label>
-						<PhoneInput defaultCountry="gh" placeholder="Enter Phone Number" />
+						<PhoneInput
+							country="gh"
+							placeholder="Enter Phone Number"
+							value={phonenumber}
+							onChange={updatePhonenumber}
+						/>
 					</div>
 
 					<div className="form-group">
