@@ -335,3 +335,16 @@ label {
 .swiper.swiper-horizontal {
 	height: 100%;
 }
+
+.toast-icon-container {
+	background-color: var(--primaryColor);
+}
+
+.custom-toast {
+	background-color: var(--layout-bg);
+	color: var(--text-color);
+	-webkit-box-shadow: var(--box-shadow);
+	-moz-box-shadow: var(--box-shadow);
+	box-shadow: var(--box-shadow);
+	border: 1px solid var(--primaryColor);
+}
