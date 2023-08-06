@@ -3,8 +3,7 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TitleLabel } from "../components";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
-// import { PhoneInput, usePhoneValidation } from "react-international-phone";
-import PhoneInput from "react-phone-number-input";
+import PhoneInput, { formatPhoneNumberIntl, isValidPhoneNumber } from "react-phone-number-input";
 import { useForm } from "react-hook-form";
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
 
@@ -23,7 +22,7 @@ const USER_KEY = import.meta.env.VITE_APP_USER_KEY;
 const Contact = () => {
 	const [loading, setLoading] = useState(false);
 	const [phonenumber, setPhonenumber] = useState("");
-	// const phoneValidation = usePhoneValidation(phonenumber);
+	const [phoneError, setPhoneError] = useState(false);
 
 	const form = useForm<ContactFormType>({
 		defaultValues: {
@@ -39,47 +38,61 @@ const Contact = () => {
 		register,
 		handleSubmit,
 		formState: { errors },
+		reset,
 	} = form;
 
 	const onSubmit = (data: ContactFormType) => {
-		console.log(phonenumber);
-		// console.log(phoneValidation);
-		// setLoading(true);
-		// const form = document.createElement("form");
-		// form.style.display = "none";
+		if (phonenumber) {
+			if (isValidPhoneNumber(phonenumber)) {
+				setPhoneError(false);
+				data.phone = phonenumber;
+				processSubmission(data);
+			} else {
+				setPhoneError(true);
+			}
+		} else {
+			setPhoneError(false);
+			processSubmission(data);
+		}
+	};
 
-		// const emailBody: any = {
-		// 	from_name: data.fullname + ` <${data.email}>`,
-		// 	to_name: "Stephen Adom Addae",
-		// 	message: data.message,
-		// 	reply_to: data.email,
-		// };
-
-		// for (const key in emailBody) {
-		// 	const input = document.createElement("input");
-		// 	input.type = "hidden";
-		// 	input.name = key;
-		// 	input.value = emailBody[key];
-		// 	form.appendChild(input);
-		// }
-
-		// document.body.appendChild(form);
-
-		// emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
-		// 	(result: EmailJSResponseStatus) => {
-		// 		console.log(result.text);
-		// 		setLoading(false);
-		// 	},
-		// 	(error) => {
-		// 		console.log(error.text);
-		// 		setLoading(false);
-		// 	}
-		// );
+	const processSubmission = (data: ContactFormType) => {
+		setLoading(true);
+		const form = document.createElement("form");
+		form.style.display = "none";
+		const emailBody: any = {
+			from_name: data.fullname + ` <${data.email}> <${data.phone}>`,
+			to_name: "Stephen Adom Addae",
+			message: data.message,
+			reply_to: data.email,
+		};
+		for (const key in emailBody) {
+			const input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = emailBody[key];
+			form.appendChild(input);
+		}
+		document.body.appendChild(form);
+		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
+			(result: EmailJSResponseStatus) => {
+				reset();
+				setPhonenumber("");
+				setPhoneError(false);
+				console.log(result.text);
+				setLoading(false);
+			},
+			(error) => {
+				console.log(error.text);
+				setLoading(false);
+			}
+		);
 	};
 
 	const updatePhonenumber = (value: string) => {
-		console.log(value);
-		// console.log(isPossiblePhoneNumber(value));
+		if (value) {
+			setPhonenumber(formatPhoneNumberIntl(value));
+		}
 	};
 
 	const errorBorder = (field: keyof ContactFormType) => {
@@ -152,6 +165,11 @@ const Contact = () => {
 							value={phonenumber}
 							onChange={updatePhonenumber}
 						/>
+						{phoneError && (
+							<span className="block text-red-600 text-sm mt-1">
+								Phone number entered is invalid
+							</span>
+						)}
 					</div>
 
 					<div className="form-group">
