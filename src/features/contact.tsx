@@ -15,6 +15,10 @@ type ContactFormType = {
 	message: string;
 };
 
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID as string;
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID as string;
+const USER_KEY = process.env.REACT_APP_USER_KEY as string;
+
 const Contact = () => {
 	const [loading, setLoading] = useState(true);
 
@@ -56,7 +60,7 @@ const Contact = () => {
 
 		document.body.appendChild(form);
 
-		emailjs.sendForm("service_iljohou", "template_gicdnqz", form, "7JGwtKQcRgR4XdTIc").then(
+		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
 			(result: EmailJSResponseStatus) => {
 				console.log(result.text);
 				setLoading(false);
