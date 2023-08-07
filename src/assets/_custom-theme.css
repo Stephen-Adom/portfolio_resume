@@ -1,0 +1,56 @@
+:root {
+	font-family: "Poppins", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+	/* --lightPrimaryColor: #3ab2ee;
+	--primaryColor: #1e62d1; */
+
+	/* LIGHT THEME COLORS*/
+	--box-shadow-light: 3px 3px 10px 3px #d6e5f8;
+	--white-gradient-bg: linear-gradient(145deg, #e2e8ec, #ffffff);
+	--gradient-box-shadow-light: 5px 5px 15px #d1d9e6, -5px -5px 15px #ffffff;
+	--layout-bg-light: #e7f0fb;
+	--layout-bg-2-light: #fff;
+	--text-color-light: #181c32;
+	--timeline-connector-color-light: #dee2e6;
+	--input-border-light: #ced4da;
+	--text-grey-light: #9ca3af;
+	--project-card-overlay-light: none;
+
+	/* DARK THEME COLORS*/
+	--box-shadow-dark: 3px 3px 10px 3px #181c21;
+	--dark-gradient-bg: linear-gradient(145deg, #1e2024, #23272b);
+	--gradient-box-shadow-dark: 10px 10px 19px #000000, -10px -10px 19px #0f1113;
+	--layout-bg-dark: #212428;
+	--layout-bg-2-dark: #0a0a12;
+	--text-color-dark: #fefeff;
+	--timeline-connector-color-dark: #0a0a12;
+	--input-border-dark: #41454a;
+	--text-grey-dark: #aeb3bb;
+	--project-card-overlay-dark: rgb(0 0 0 / 29%);
+}
+
+[color-scheme="light"] {
+	--gradient-bg: var(--white-gradient-bg);
+	--gradient-box-shadow: var(--gradient-box-shadow-light);
+	--layout-bg: var(--layout-bg-light);
+	--layout-bg-2: var(--layout-bg-2-light);
+	--text-color: var(--text-color-light);
+	--box-shadow: var(--box-shadow-light);
+	--timeline-connector-color: var(--timeline-connector-color-light);
+	--input-border: var(--input-border-light);
+	--text-grey: var(--text-grey-light);
+	--project-card-overlay: var(--project-card-overlay-light);
+}
+
+[color-scheme="dark"] {
+	--gradient-bg: var(--dark-gradient-bg);
+	--gradient-box-shadow: var(--gradient-box-shadow-dark);
+	--layout-bg: var(--layout-bg-dark);
+	--layout-bg-2: var(--layout-bg-2-dark);
+	--text-color: var(--text-color-dark);
+	--box-shadow: var(--box-shadow-dark);
+	--timeline-connector-color: var(--timeline-connector-color-dark);
+	--input-border: var(--input-border-dark);
+	--text-grey: var(--text-grey-dark);
+	--project-card-overlay: var(--project-card-overlay-dark);
+}
