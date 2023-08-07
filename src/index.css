@@ -10,13 +10,11 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	box-sizing: border-box;
-}
-
 html,
 body {
 	scroll-behavior: smooth;
+	max-width: 100vw;
+	overflow-x: hidden;
 }
 
 body {
@@ -136,6 +134,10 @@ body {
 	-webkit-box-shadow: var(--box-shadow);
 	-moz-box-shadow: var(--box-shadow);
 	box-shadow: var(--box-shadow);
+}
+
+.mobile-menu-btn svg {
+	color: var(--text-color);
 }
 
 .mobile-menu-btn:hover svg {
@@ -347,4 +349,13 @@ label {
 	-moz-box-shadow: var(--box-shadow);
 	box-shadow: var(--box-shadow);
 	border: 1px solid var(--primaryColor);
+}
+
+.p-dialog-content {
+	background-color: var(--layout-bg-2) !important;
+}
+
+.p-dialog-content h2,
+.p-dialog-content p {
+	color: var(--text-color);
 }
