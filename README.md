@@ -57,7 +57,7 @@ A full responsive portfolio showing details about me and my personal works. This
 
 Here is a link to my project. You can view to show the output so far.
 
-- [Live Demo Link](https://portfolio-nu-lemon-71.vercel.app/)
+- [Live Demo Link](https://stephen-addae.vercel.app/)
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
