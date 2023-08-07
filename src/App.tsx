@@ -43,7 +43,7 @@ function App() {
 	}, [theme]);
 
 	return (
-		<section className="min-h-screen app">
+		<section className="min-h-screen app relative">
 			<SidebarContext.Provider
 				value={{
 					isSidebarVisible,

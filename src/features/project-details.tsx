@@ -19,10 +19,9 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 			showHeader={false}
 			visible={visible}
 			maximized={true}
-			style={{ width: "100vw" }}
 			onHide={() => setVisible(false)}
 		>
-			<div className="project-details-container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-[60%_40%] gap-3 mt-10 relative top-[50%] -translate-y-[50%]">
+			<div className="project-details-container grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-[60%_40%] gap-3 mt-10 relative top-0 sm:top-0 md:top-[50%] translate-y-0 sm:translate-y-0  md:-translate-y-[50%]">
 				<section className="project-image-container">
 					<Swiper
 						modules={[Navigation, Pagination]}
@@ -37,7 +36,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 							return (
 								<SwiperSlide key={index}>
 									<div
-										className="screenshot-container bg-contain bg-center h-[450px] w-full bg-no-repeat"
+										className="screenshot-container bg-contain bg-center h-[300px] md:h-[450px] w-full bg-no-repeat"
 										style={{ backgroundImage: `url(${screenshot})` }}
 									></div>
 								</SwiperSlide>
@@ -59,11 +58,11 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 						})}
 					</div>
 
-					<div className="flex items-center gap-4 mt-10">
+					<div className="flex items-center gap-3 md:gap-4 mt-10">
 						<a
 							href={project.gitHub_link}
 							target="_blank"
-							className="px-5 py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center gap-x-2"
+							className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
 						>
 							VIEW PROJECT
 							<BsArrowRightCircle className="text-lg" />
@@ -72,7 +71,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 						<a
 							href={project.live_demo}
 							target="_blank"
-							className="px-5 py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center gap-x-2"
+							className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
 						>
 							LIVE DEMO
 							<BsGlobeAmericas className="text-lg" />

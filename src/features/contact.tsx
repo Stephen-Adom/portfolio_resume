@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { InputText } from "primereact/inputtext";
 import { InputTextarea } from "primereact/inputtextarea";
 import PhoneInput, { formatPhoneNumberIntl, isValidPhoneNumber } from "react-phone-number-input";
 import { useForm } from "react-hook-form";
-import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 import { TitleLabel } from "../components";
 import { BsCheckAll } from "react-icons/bs";
@@ -77,7 +77,7 @@ const Contact = () => {
 		}
 		document.body.appendChild(form);
 		emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, USER_KEY).then(
-			(result: EmailJSResponseStatus) => {
+			() => {
 				reset();
 				setPhonenumber("");
 				setPhoneError(false);

@@ -61,10 +61,11 @@ const LeftSidebar = () => {
 			</ul>
 
 			<a
-				href="mailto:stephen.alaska94@gmail.com"
+				data-to-scrollspy-id="contact"
+				href="#contact"
 				className="flex items-center justify-center w-full gap-2 py-4 tracking-widest text-white rounded-full linear-gradient"
 			>
-				<HiOutlineEnvelope /> HIRE ME
+				<HiOutlineEnvelope className="text-lg" /> LET CONNECT
 			</a>
 		</div>
 	);
