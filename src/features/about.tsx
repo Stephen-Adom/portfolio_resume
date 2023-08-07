@@ -19,12 +19,15 @@ const About = () => {
 				Every great design begin with an even <span className="text-lightBlue">better story</span>
 			</h1>
 			<p className="mt-6 w-full lg:w-[70%]" data-aos="fade-up" data-aos-duration="3000">
-				Hey there! So, for the past four years, I've been on this cool journey as a full-stack
-				software engineer. During this time, I had the chance to do remote work for Interface
-				Financial Technology as their lead Front-end Developer, and let me tell you, it was a blast!
-				I got to update their web apps and boy, did it make a difference! We improved stability,
-				security, and speed by a whopping 75%! Can you believe it? That made both customers and
-				employees super happy.
+				Hey there! My name is Stephen Adom Addae. So, for the past 4 years, I've been on this cool
+				journey as a full-stack software engineer. During this time, I had the chance to do remote
+				work for Interface Financial Technology as their lead Front-end Developer, and let me tell
+				you, it was a blast! I got to update their web apps and boy, did it make a difference! We
+				improved stability, security, and speed by a whopping 75%!. Recently, I had another exciting
+				opportunity - I completed a Remote Full Stack Web Development Program. I spent over 1300
+				hours mastering algorithms, data structures, and full-stack development. While doing that, I
+				was simultaneously working on some awesome projects with Ruby, Rails, JavaScript, React, and
+				Redux. It was intense, but totally worth it!
 			</p>
 
 			<Inplace>
@@ -38,14 +41,6 @@ const About = () => {
 					</p>
 				</InplaceDisplay>
 				<InplaceContent>
-					<p className="mt-6 w-full lg:w-[70%]" data-aos="fade-up" data-aos-duration="3000">
-						Recently, I had another exciting opportunity - I completed a Remote Full Stack Web
-						Development Program. It was quite the ride! I spent over 1300 hours mastering
-						algorithms, data structures, and full-stack development. While doing that, I was
-						simultaneously working on some awesome projects with Ruby, Rails, JavaScript, React, and
-						Redux. It was intense, but totally worth it!
-					</p>
-
 					<p className="mt-6 w-full lg:w-[70%]" data-aos="fade-up" data-aos-duration="3000">
 						During the program, I also developed skills in remote pair programming using GitHub,
 						industry-standard git-flow, and daily standups to communicate and collaborate with

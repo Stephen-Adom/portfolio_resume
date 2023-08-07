@@ -62,7 +62,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 						<a
 							href={project.gitHub_link}
 							target="_blank"
-							className="px-3 md:px-5 w-full py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
+							className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
 						>
 							VIEW PROJECT
 							<BsArrowRightCircle className="text-lg" />
@@ -71,7 +71,7 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 						<a
 							href={project.live_demo}
 							target="_blank"
-							className="px-3 md:px-5 w-full py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
+							className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
 						>
 							LIVE DEMO
 							<BsGlobeAmericas className="text-lg" />
