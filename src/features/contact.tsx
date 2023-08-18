@@ -224,7 +224,7 @@ const Contact = () => {
 								required: "Enter your message subject",
 							})}
 						/>
-						{errorMessage("email")}
+						{errorMessage("subject")}
 					</div>
 
 					<div className="col-span-1 md:col-span-2 form-group">
