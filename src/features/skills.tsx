@@ -1,13 +1,16 @@
 import { SkillsCard, TitleLabel } from "../components";
 import { AiFillHtml5 } from "react-icons/ai";
-import { FaAngular, FaReact, FaCss3, FaBootstrap } from "react-icons/fa";
+import { FaAngular, FaReact, FaCss3, FaBootstrap, FaJava } from "react-icons/fa";
 import { TbBrandJavascript, TbBrandTypescript } from "react-icons/tb";
 import { SiTailwindcss, SiRedux, SiReactivex } from "react-icons/si";
-import { BiShapeTriangle } from "react-icons/bi";
+import { BiShapeTriangle, BiLogoSpringBoot } from "react-icons/bi";
 
 const Skills = () => {
 	return (
-		<div className="my-16 lg:my-40 about-section" id="skills">
+		<div
+			className="my-16 lg:my-40 about-section"
+			id="skills"
+		>
 			<TitleLabel>
 				<BiShapeTriangle className="text-lg" /> MY SKILLS
 			</TitleLabel>
@@ -78,6 +81,16 @@ const Skills = () => {
 					label="RxJS"
 					icon={<SiReactivex className="text-[5rem] text-pink-700"></SiReactivex>}
 					color="bg-pink-700"
+				/>
+				<SkillsCard
+					label="Java"
+					icon={<FaJava className="text-[5rem] text-orange-600"></FaJava>}
+					color="bg-orange-600"
+				/>
+				<SkillsCard
+					label="Spring Boot"
+					icon={<BiLogoSpringBoot className="text-[5rem] text-green-600"></BiLogoSpringBoot>}
+					color="bg-green-600"
 				/>
 			</div>
 		</div>
