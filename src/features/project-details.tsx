@@ -51,7 +51,11 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 					<div className="mt-4 flex items-center gap-2 flex-wrap tech bottom-4 left-4">
 						{project.tech_stacks.map((stack) => {
 							return (
-								<button type="button" className="btn btn-tech" key={stack}>
+								<button
+									type="button"
+									className="btn btn-tech"
+									key={stack}
+								>
 									{stack}
 								</button>
 							);
@@ -68,14 +72,16 @@ const ProjectDetails = ({ visible, setVisible, project }: propType) => {
 							<BsArrowRightCircle className="text-lg" />
 						</a>
 
-						<a
-							href={project.live_demo}
-							target="_blank"
-							className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
-						>
-							LIVE DEMO
-							<BsGlobeAmericas className="text-lg" />
-						</a>
+						{project.live_demo && (
+							<a
+								href={project.live_demo}
+								target="_blank"
+								className="px-3 md:px-5 w-full md:w-max py-3 text-xs font-bold text-white rounded-full linear-gradient flex items-center justify-center gap-x-1 md:gap-x-2"
+							>
+								LIVE DEMO
+								<BsGlobeAmericas className="text-lg" />
+							</a>
+						)}
 					</div>
 				</section>
 			</div>

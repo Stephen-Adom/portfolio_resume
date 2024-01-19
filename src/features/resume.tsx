@@ -53,7 +53,7 @@ const Resume = () => {
 		{
 			startdate: "January 2023",
 			enddate: "December 2023",
-			certification: "Full Stack Web Developer, Full Stack Web Development Program",
+			certification: "Full Stack Web Developer, Full Stack Web Development Bootcamp",
 			school: "Microverse",
 			schoolUrl: "https://www.microverse.org/",
 		},
@@ -117,21 +117,41 @@ const Resume = () => {
 				<RiSuitcase2Line className="text-lg" /> RESUME
 			</TitleLabel>
 
-			<section data-aos="fade-up" data-aos-duration="2500">
+			<section
+				data-aos="fade-up"
+				data-aos-duration="2500"
+			>
 				<h1 className="mt-10 text-4xl lg:text-5xl w-full lg:w-[80%] font-light leading-10 lg:leading-[60px]">
 					My <span className="text-lightBlue">Experience</span>
 				</h1>
-				<div className="mt-6 w-full lg:w-[70%]" data-aos="fade-left" data-aos-duration="3000">
-					<Timeline value={experiences} content={(experience) => renderExperience(experience)} />
+				<div
+					className="mt-6 w-full lg:w-[70%]"
+					data-aos="fade-left"
+					data-aos-duration="3000"
+				>
+					<Timeline
+						value={experiences}
+						content={(experience) => renderExperience(experience)}
+					/>
 				</div>
 			</section>
 
-			<section data-aos="fade-up" data-aos-duration="2500">
+			<section
+				data-aos="fade-up"
+				data-aos-duration="2500"
+			>
 				<h1 className="mt-6 text-4xl lg:text-5xl w-full lg:w-[80%] font-light leading-10 lg:leading-[60px]">
 					My <span className="text-lightBlue">Education</span>
 				</h1>
-				<div className="mt-6 w-full lg:w-[70%]" data-aos="fade-left" data-aos-duration="3000">
-					<Timeline value={educations} content={(education) => renderEducation(education)} />
+				<div
+					className="mt-6 w-full lg:w-[70%]"
+					data-aos="fade-left"
+					data-aos-duration="3000"
+				>
+					<Timeline
+						value={educations}
+						content={(education) => renderEducation(education)}
+					/>
 				</div>
 			</section>
 		</div>
